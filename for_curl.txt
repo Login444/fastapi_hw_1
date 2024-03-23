@@ -1,0 +1,7 @@
+Invoke-WebRequest -Uri 'http://127.0.0.1:8000/tasks/' -Method POST -Headers @{'accept'='application/json'; 'Content-Type'='application/json'} -Body '{"task_title": "1st Task", "task_description": "Its a 1st task", "task_status": "False"}'
+
+Invoke-WebRequest -Uri 'http://127.0.0.1:8000/tasks/' -Method POST -Headers @{'accept'='application/json'; 'Content-Type'='application/json'} -Body '{"task_title": "2nd Task", "task_description": "Its a 2nd task", "task_status": "Okay"}'
+
+Invoke-WebRequest -Uri 'http://127.0.0.1:8000/tasks/1' -Method PUT -Headers @{'accept'='application/json'; 'Content-Type'='application/json'} -Body '{"task_title": "3rd Task", "task_description": "Updated", "task_status": "False"}'
+
+Invoke-WebRequest -Uri 'http://127.0.0.1:8000/tasks/0' -Method DELETE -Headers @{'accept'='application/json'}
